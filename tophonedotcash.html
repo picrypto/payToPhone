@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Pay to Phone</title>
+  <link rel="icon" href="https://bitcoincashers.org/wp-content/uploads/2018/05/cropped-site_identity-32x32.png">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <h1>PayToPhone.<a class="green" href="https://bitcoincash.org">Cash</a></h1>
+  <p>Send <a class="green" href="https://bitcoincash.org">Bitcoin Cash</a> to a phone number using <a class="green" href="https://cointext.io/">Cointext</a>.</p>
+  <p class="warning">Please include the country code of the phone number in the phone number field.</p>
+  <div id="centeredDiv">
+    <label class="green">Phone Number</label>
+    <input id="phoneNumber" class="green" type="tel">
+    <br><br>
+    <label class="green">Amount </label>
+    <select id="currencyMenu">
+        <option value="bch">BCH</option>
+        <option value="usd">USD</option>
+    </select> 
+    <input id="amount" class="green" type="number">
+    <button onclick="displayPaymentInfo();" id="qrCodeButton">Generate QR Code</button>
+    <br>
+    <label class="warning" id="error"></label>
+    <br>
+    <br>
+    <p id="scanMessage">Scan the below QR code with your wallet to send the coins:</p>
+    <br>
+    <br>
+  </div>
+  <br>
+  <br>
+  <br>
+  <img id="QRCode">
+
+  <div id="centeredDiv">
+    <a href="" id="openInWallet">Open in wallet</a>
+  </div>
+</body>
+
+</html>
